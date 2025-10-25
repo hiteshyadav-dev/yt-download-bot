@@ -1,0 +1,12 @@
+app:
+  name: telegram-youtube-bot
+  services:
+    - name: bot
+      type: worker
+      env:
+        - key: BOT_TOKEN
+          value: ${BOT_TOKEN}
+      regions:
+        - was
+      instance:
+        type: free
